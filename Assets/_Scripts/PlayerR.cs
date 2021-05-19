@@ -10,6 +10,8 @@ public class PlayerR : MonoBehaviour
     public float maxWidth;
     public float minWidth;
     public float speed;
+    public int health = 3;
+
     
     void Start()
     {
