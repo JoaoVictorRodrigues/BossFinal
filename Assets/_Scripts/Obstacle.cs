@@ -22,6 +22,7 @@ public class Obstacle : MonoBehaviour
         if (transform.position.y < screenEnd)
         {
             Destroy (gameObject);
+            gm.pontos += 100;
         }
     }
 
