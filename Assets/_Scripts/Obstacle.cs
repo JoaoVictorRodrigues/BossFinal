@@ -8,28 +8,31 @@ public class Obstacle : MonoBehaviour
     public int damage = 1;
     public float screenEnd;
 
+    private GameManager gm;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        gm = GameManager.GetInstance();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        if (gm.gameState != GameManager.GameState.GAME) return;
         transform.Translate(Vector2.down * speed * Time.deltaTime);
         if (transform.position.y < screenEnd)
         {
             Destroy (gameObject);
+            gm.pontos += 100;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            other.GetComponent<PlayerR>().health -= damage;
-            Debug.Log("Life" + other.GetComponent<PlayerR>().health);
-            Destroy (gameObject);
-        }
-    }
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         other.GetComponent<PlayerR>().health -= damage;
+    //         Debug.Log("Life" + other.GetComponent<PlayerR>().health);
+    //         Destroy (gameObject);
+    //     }
+    // }
 }
