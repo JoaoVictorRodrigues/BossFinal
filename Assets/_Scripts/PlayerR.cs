@@ -43,7 +43,7 @@ public class PlayerR : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.CompareTag("Obstacle")){
+        if (collision.CompareTag("ObstacleR")){
             Destroy(collision.gameObject);
             TakeDamage();
         }
