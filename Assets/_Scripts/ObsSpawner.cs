@@ -13,7 +13,7 @@ public class ObsSpawner : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject,lifetime*Time.deltaTime);
+
     }
 
     void Update(){
