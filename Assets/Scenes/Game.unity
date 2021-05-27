@@ -453,7 +453,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: de2ea5bfdfe1d6d4bb402730c3d25470, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2625,6 +2625,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459580488354552633, guid: ef9db34293dee6a419d8c0d3b3c268b8,
+        type: 3}
+      propertyPath: minTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459580488354552633, guid: ef9db34293dee6a419d8c0d3b3c268b8,
+        type: 3}
+      propertyPath: decreaseTime
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459580488354552633, guid: ef9db34293dee6a419d8c0d3b3c268b8,
+        type: 3}
+      propertyPath: startTimeBtwSpawn
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8459580488354552638, guid: ef9db34293dee6a419d8c0d3b3c268b8,
         type: 3}
