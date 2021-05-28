@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObsSpawner : MonoBehaviour
 {
+    private GameManager gm;
     public GameObject[] obstaclePositions;
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
@@ -13,10 +14,12 @@ public class ObsSpawner : MonoBehaviour
 
     void Start()
     {
-
+        gm = GameManager.GetInstance();
     }
 
     void Update(){
+        if (gm.gameState != GameManager.GameState.GAME) return;
+        
         int random = Random.Range(0,obstaclePositions.Length);
         if (timeBtwSpawn <= 0 ){
             

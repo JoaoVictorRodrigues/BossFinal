@@ -5,6 +5,9 @@ using UnityEngine;
 public class UI_Menu : MonoBehaviour{
 
     GameManager gm;
+    public GameObject pontos;
+    public GameObject vidas;
+
     private void OnEnable(){
         gm = GameManager.GetInstance();
     }
@@ -12,6 +15,8 @@ public class UI_Menu : MonoBehaviour{
 
     public void Comecar(){
         gm.ChangeState(GameManager.GameState.GAME);
+        pontos.SetActive(true);
+        vidas.SetActive(true);
     }
 
     public void Options(){

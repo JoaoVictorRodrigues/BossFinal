@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObstacleR
   - ObstacleL
+  - ObstacleB
   layers:
   - Default
   - TransparentFX
