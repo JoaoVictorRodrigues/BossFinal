@@ -23,7 +23,7 @@ public class PlayerL : MonoBehaviour{
         if(Input.GetKeyDown(KeyCode.Escape) && gm.gameState == GameManager.GameState.GAME){
             gm.ChangeState(GameManager.GameState.PAUSE);
         }
-        transform.position = Vector2.MoveTowards(transform.position, pos, speed*Time.deltaTime);
+        // transform.position = Vector2.MoveTowards(transform.position, pos, speed*Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.D) && transform.position.x < maxWidth){
             AudioManager.PlaySFX(transitionSFX);
             pos = new Vector2(transform.position.x + IncX, transform.position.y);
@@ -49,6 +49,10 @@ public class PlayerL : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("ObstacleL")){
+            Destroy(collision.gameObject);
+            TakeDamage();
+        }
+        if (collision.CompareTag("ObstacleB")){
             Destroy(collision.gameObject);
             TakeDamage();
         }

@@ -53,6 +53,10 @@ public class PlayerR : MonoBehaviour
             Destroy(collision.gameObject);
             TakeDamage();
         }
+        if (collision.CompareTag("ObstacleB")){
+            Destroy(collision.gameObject);
+            TakeDamage();
+        }
     }
     
 }

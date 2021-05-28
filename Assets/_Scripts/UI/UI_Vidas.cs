@@ -7,6 +7,7 @@ public class UI_Vidas : MonoBehaviour{
     void Start(){
         textComp = GetComponent<Text>();
         gm = GameManager.GetInstance();
+        gameObject.SetActive(false);
     }
    
     void Update(){
