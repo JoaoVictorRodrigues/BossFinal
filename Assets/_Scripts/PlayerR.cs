@@ -13,6 +13,9 @@ public class PlayerR : MonoBehaviour
 
     private GameManager gm;
 
+    public AudioClip transitionSFX;
+    public AudioClip gameoverSFX;
+
     
     void Start(){
         gm = GameManager.GetInstance();
@@ -22,9 +25,11 @@ public class PlayerR : MonoBehaviour
         if (gm.gameState != GameManager.GameState.GAME) return;
         transform.position = Vector2.MoveTowards(transform.position, pos, speed*Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < maxWidth){
+            AudioManager.PlaySFX(transitionSFX);
             pos = new Vector2(transform.position.x + IncX, transform.position.y);
             transform.position = pos;
         }else if(Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > minWidth){
+            AudioManager.PlaySFX(transitionSFX);
             pos = new Vector2(transform.position.x - IncX, transform.position.y);
             transform.position = pos;
         }
@@ -39,6 +44,7 @@ public class PlayerR : MonoBehaviour
     }
 
     public void Die(){
+        AudioManager.PlaySFX(gameoverSFX);
         gm.ChangeState(GameManager.GameState.ENDGAME);
     }
 

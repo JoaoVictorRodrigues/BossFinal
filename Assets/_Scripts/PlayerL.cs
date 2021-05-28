@@ -10,6 +10,8 @@ public class PlayerL : MonoBehaviour{
     public float speed;
 
     private GameManager gm;
+
+    public AudioClip transitionSFX;
     
     void Start(){
         gm = GameManager.GetInstance();
@@ -23,9 +25,11 @@ public class PlayerL : MonoBehaviour{
         }
         transform.position = Vector2.MoveTowards(transform.position, pos, speed*Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.D) && transform.position.x < maxWidth){
+            AudioManager.PlaySFX(transitionSFX);
             pos = new Vector2(transform.position.x + IncX, transform.position.y);
             transform.position = pos;
         }else if(Input.GetKeyDown(KeyCode.A) && transform.position.x > minWidth){
+            AudioManager.PlaySFX(transitionSFX);
             pos = new Vector2(transform.position.x - IncX, transform.position.y);
             transform.position = pos;
         }
