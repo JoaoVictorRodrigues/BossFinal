@@ -8,7 +8,7 @@ public class UI_Pontos : MonoBehaviour{
     void Start(){
         
         gm = GameManager.GetInstance();
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
         textComp = GetComponent<Text>();
     }
    
