@@ -12,18 +12,27 @@ public class ObsSpawner : MonoBehaviour
     public float minTime;
     public float lifetime;
 
+    private int[] points;
+    private int i;
+
     void Start()
     {
         gm = GameManager.GetInstance();
+        i = 0;
+        points = new int[5]{1,1,1,1,1}; 
     }
 
     void Update(){
         if (gm.gameState != GameManager.GameState.GAME) return;
+
+        if (i>=points.Length){
+            i = 0;
+        }
         
-        int random = Random.Range(0,obstaclePositions.Length);
+        // int random = Random.Range(0,obstaclePositions.Length);
         if (timeBtwSpawn <= 0 ){
             
-            Instantiate(obstaclePositions[random],transform.position,Quaternion.identity);
+            Instantiate(obstaclePositions[points[i]],transform.position,Quaternion.identity);
             
             timeBtwSpawn = startTimeBtwSpawn;
             if (startTimeBtwSpawn > minTime){
@@ -32,5 +41,6 @@ public class ObsSpawner : MonoBehaviour
         }else{
             timeBtwSpawn -= Time.deltaTime;
         }
+        i++;
     }
 }
