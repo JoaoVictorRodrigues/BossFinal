@@ -57,6 +57,10 @@ public class PlayerR : MonoBehaviour
             Destroy(collision.gameObject);
             TakeDamage();
         }
+        if (collision.CompareTag("PowerUp")){
+            Destroy(collision.gameObject);
+            gm.pontos += 5000;
+        }
     }
     
 }
