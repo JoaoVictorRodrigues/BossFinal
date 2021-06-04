@@ -19,7 +19,7 @@ public class ObsSpawner : MonoBehaviour
     {
         gm = GameManager.GetInstance();
         i = 0;
-        points = new int[5]{1,1,1,1,1}; 
+        points = new int[10]{0,1,1,0,1,1,0,0,1,0}; 
     }
 
     void Update(){
@@ -38,9 +38,9 @@ public class ObsSpawner : MonoBehaviour
             if (startTimeBtwSpawn > minTime){
                 startTimeBtwSpawn -= decreaseTime;
             }
+            i++;
         }else{
             timeBtwSpawn -= Time.deltaTime;
         }
-        i++;
     }
 }

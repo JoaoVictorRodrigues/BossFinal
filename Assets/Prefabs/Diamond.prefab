@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9372f43ca92f454ba1b14d27011c369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   screenEnd: -5.5
   powerupSFX: {fileID: 8300000, guid: aff888ecd00e3ed44aebfdebd5a241cf, type: 3}
