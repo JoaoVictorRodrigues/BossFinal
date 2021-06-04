@@ -8,12 +8,12 @@ public class UI_Pontos : MonoBehaviour{
     void Start(){
         
         gm = GameManager.GetInstance();
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
         textComp = GetComponent<Text>();
     }
    
     void Update(){
 
-        textComp.text = $"Pontos: {gm.pontos}";
+        textComp.text = $"{gm.pontos}";
     }
 }
