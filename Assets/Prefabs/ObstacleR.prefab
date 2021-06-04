@@ -99,6 +99,7 @@ MonoBehaviour:
   damage: 1
   screenEnd: -5.5
   effect: {fileID: 8112535604155131883, guid: 4d982a6a7a81f2042b81eb5f079391e0, type: 3}
+  explosionSFX: {fileID: 8300000, guid: a957cc4e6e48aa54d8689a2cbff3c672, type: 3}
 --- !u!61 &4106884420172989659
 BoxCollider2D:
   m_ObjectHideFlags: 0

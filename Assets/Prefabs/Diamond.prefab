@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7657468365704443750}
   - component: {fileID: 1811072422379005034}
   - component: {fileID: 195806277230330482}
+  - component: {fileID: -4270079156457740106}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: PowerUp
@@ -145,3 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   screenEnd: -5.5
+  powerupSFX: {fileID: 0}
+--- !u!114 &-4270079156457740106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8478318387063011956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9372f43ca92f454ba1b14d27011c369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  screenEnd: -5.5
+  powerupSFX: {fileID: 8300000, guid: aff888ecd00e3ed44aebfdebd5a241cf, type: 3}
