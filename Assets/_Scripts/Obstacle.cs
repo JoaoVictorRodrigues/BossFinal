@@ -10,6 +10,8 @@ public class Obstacle : MonoBehaviour
 
     private GameManager gm;
 
+    public GameObject effect;
+
     // Start is called before the first frame update
     void Start() {
         gm = GameManager.GetInstance();
@@ -26,13 +28,11 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         other.GetComponent<PlayerR>().health -= damage;
-    //         Debug.Log("Life" + other.GetComponent<PlayerR>().health);
-    //         Destroy (gameObject);
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+           Instantiate(effect,transform.position,Quaternion.identity);
+        }
+    }
 }
