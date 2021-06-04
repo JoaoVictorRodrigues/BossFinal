@@ -8,6 +8,8 @@ public class PowerUp : MonoBehaviour{
 
     private GameManager gm;
 
+    public AudioClip powerupSFX;
+
     // Start is called before the first frame update
     void Start() {
         gm = GameManager.GetInstance();
@@ -19,6 +21,12 @@ public class PowerUp : MonoBehaviour{
         transform.Translate(Vector2.down * speed * Time.deltaTime);
         if (transform.position.y < screenEnd){
             Destroy (gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("Player")){
+            AudioManager.PlaySFX(powerupSFX);
         }
     }
 }

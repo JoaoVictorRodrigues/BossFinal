@@ -12,6 +12,8 @@ public class Obstacle : MonoBehaviour
 
     public GameObject effect;
 
+    public AudioClip explosionSFX;
+
     // Start is called before the first frame update
     void Start() {
         gm = GameManager.GetInstance();
@@ -28,11 +30,10 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-           Instantiate(effect,transform.position,Quaternion.identity);
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("Player")){
+            AudioManager.PlaySFX(explosionSFX);
+            Instantiate(effect,transform.position,Quaternion.identity);
         }
     }
 }
