@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1811072422379005034}
   - component: {fileID: -4270079156457740106}
   m_Layer: 0
-  m_Name: Diamond
+  m_Name: PU_Health
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   screenEnd: -5.5
-  powerupSFX: {fileID: 8300000, guid: aff888ecd00e3ed44aebfdebd5a241cf, type: 3}
+  PUSFX: {fileID: 8300000, guid: 2f3dacbbb01d6464294e324d5a07af64, type: 3}

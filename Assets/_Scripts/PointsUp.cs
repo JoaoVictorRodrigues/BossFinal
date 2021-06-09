@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour{
+public class PointsUp : MonoBehaviour{
     public float speed;
     public float screenEnd;
 
     private GameManager gm;
 
-    public AudioClip PUSFX;
+    public AudioClip PointsSFX;
 
     // Start is called before the first frame update
     void Start() {
@@ -26,12 +26,8 @@ public class PowerUp : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            AudioManager.PlaySFX(PUSFX);
-            if(gm.vidas < 3){
-                gm.vidas += 1;
-            } else {
-                gm.pontos += 1000;
-            }
+            AudioManager.PlaySFX(PointsSFX);
+            gm.pontos += 5000;
         }
     }
 }
