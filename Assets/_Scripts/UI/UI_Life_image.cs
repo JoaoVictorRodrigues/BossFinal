@@ -13,15 +13,15 @@ public class UI_Life_image : MonoBehaviour{
     }
 
     void Update() {
-        if(gm.vidas < 1){
+        if(gm.vidas == 0){
             lifes[0].gameObject.SetActive(false);
             lifes[1].gameObject.SetActive(false);
             lifes[2].gameObject.SetActive(false);
-        } else if(gm.vidas < 2){
+        } else if(gm.vidas == 1){
             lifes[0].gameObject.SetActive(true);
             lifes[1].gameObject.SetActive(false);
             lifes[2].gameObject.SetActive(false);
-        } else if(gm.vidas < 3){
+        } else if(gm.vidas == 2){
             lifes[0].gameObject.SetActive(true);
             lifes[1].gameObject.SetActive(true);
             lifes[2].gameObject.SetActive(false);

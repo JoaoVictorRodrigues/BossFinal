@@ -8,7 +8,7 @@ public class PowerUp : MonoBehaviour{
 
     private GameManager gm;
 
-    public AudioClip powerupSFX;
+    public AudioClip explosionSFX;
 
     // Start is called before the first frame update
     void Start() {
@@ -26,7 +26,10 @@ public class PowerUp : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            AudioManager.PlaySFX(powerupSFX);
+            AudioManager.PlaySFX(explosionSFX);
+            if(gm.vidas < 3){
+                gm.vidas += 1;
+            }
         }
     }
 }
