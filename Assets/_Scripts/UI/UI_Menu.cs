@@ -12,9 +12,8 @@ public class UI_Menu : MonoBehaviour{
         gm = GameManager.GetInstance();
     }
 
-
     public void Comecar(){
-        gm.ChangeState(GameManager.GameState.GAME);
+        gm.ChangeState(GameManager.GameState.TUTORIAL);
         // pontos.SetActive(true);
         // vidas.SetActive(true);
     }
