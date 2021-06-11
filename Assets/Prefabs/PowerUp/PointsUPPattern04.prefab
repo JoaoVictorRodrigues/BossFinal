@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d1b8123b3c5554f8f8e112dcd35a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUp: {fileID: 8478318387063011956, guid: c24edd4740ecae5479589e44bc23c045, type: 3}
+  PowerUp: {fileID: 8478318387063011956, guid: 3164c810fe163ee47aa2e339002d1950, type: 3}
 --- !u!1 &9041996890080855816
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 1388233517861012707}
   - component: {fileID: 2572162772160818539}
   m_Layer: 0
-  m_Name: PowerUpPattern04
+  m_Name: PointsUPPattern04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,8 @@ public class GameManager{
     public delegate void ChangeStateDelegate();
     public static ChangeStateDelegate changeStateDelegate;
 
+   
+
     public void ChangeState(GameState nextState){
         if (nextState == GameState.MENU) Reset();
         gameState = nextState;
