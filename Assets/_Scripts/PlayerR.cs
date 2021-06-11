@@ -52,12 +52,10 @@ public class PlayerR : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.CompareTag("ObstacleL")){
+        if (collision.CompareTag("ObstacleR")){
             if(shield.activeInHierarchy){
-                Debug.Log("SIM, ESTÁ ATIVO NA CARALHA DA HIERAQUIA");
                 shield.SetActive(false);
             } else {
-                Debug.Log("SE FODEO E TOMOU DANO");
                 TakeDamage();
             }
             Destroy(collision.gameObject);
@@ -71,7 +69,6 @@ public class PlayerR : MonoBehaviour
         if (collision.CompareTag("DefenceUp")){
             Destroy(collision.gameObject);
             shield.SetActive(true);
-            Debug.Log("SIM, EU ATIVEI O SHIELD CARALHO");
         }
     }
     
