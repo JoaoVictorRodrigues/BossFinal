@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2628646539889460579}
   - component: {fileID: 8323253080854496235}
   - component: {fileID: 7974404269755733509}
+  - component: {fileID: 4474700283500402841}
   m_Layer: 0
   m_Name: ColisionG
   m_TagString: Untagged
@@ -4811,3 +4812,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4474700283500402841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433919050641942623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caade23d835e6ed4096d352dfb533144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 10
