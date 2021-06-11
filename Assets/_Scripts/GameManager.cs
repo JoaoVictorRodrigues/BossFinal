@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager{
 
-    public enum GameState { MENU, GAME, PAUSE, ENDGAME, OPTIONS };
+    public enum GameState { MENU, GAME, PAUSE, ENDGAME, OPTIONS, TUTORIAL};
     public GameState gameState { get; private set; }
     public int vidas;
     public int pontos;
