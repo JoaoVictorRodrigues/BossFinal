@@ -16,9 +16,12 @@ public class PlayerR : MonoBehaviour
     public AudioClip transitionSFX;
     public AudioClip gameoverSFX;
 
+    public GameObject shield;
+
     
     void Start(){
         gm = GameManager.GetInstance();
+        shield.SetActive(false);
     }
 
     void Update(){
@@ -49,13 +52,15 @@ public class PlayerR : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.CompareTag("ObstacleR")){
+        if (collision.CompareTag("ObstacleL")){
+            if(shield.activeInHierarchy){
+                Debug.Log("SIM, ESTÁ ATIVO NA CARALHA DA HIERAQUIA");
+                shield.SetActive(false);
+            } else {
+                Debug.Log("SE FODEO E TOMOU DANO");
+                TakeDamage();
+            }
             Destroy(collision.gameObject);
-            TakeDamage();
-        }
-        if (collision.CompareTag("ObstacleB")){
-            Destroy(collision.gameObject);
-            TakeDamage();
         }
         if (collision.CompareTag("PowerUp")){
             Destroy(collision.gameObject);
@@ -65,6 +70,8 @@ public class PlayerR : MonoBehaviour
         }
         if (collision.CompareTag("DefenceUp")){
             Destroy(collision.gameObject);
+            shield.SetActive(true);
+            Debug.Log("SIM, EU ATIVEI O SHIELD CARALHO");
         }
     }
     
