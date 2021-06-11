@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5ec2000c82e7d4490fda0f64ea9a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 5905275867928679679, guid: f9738de022319bf44b69ac190e191336,
+  obstacle: {fileID: 5905275867928679679, guid: cce38f4146b65db44b3ca545192b98f9,
     type: 3}
 --- !u!1 &7174566079370319602
 GameObject:

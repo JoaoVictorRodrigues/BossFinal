@@ -58,7 +58,12 @@ public class PlayerL : MonoBehaviour{
         }
         if (collision.CompareTag("PowerUp")){
             Destroy(collision.gameObject);
-            gm.pontos += 5000;
+        }
+        if (collision.CompareTag("PointsUp")){
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("DefenceUp")){
+            Destroy(collision.gameObject);
         }
     }
     

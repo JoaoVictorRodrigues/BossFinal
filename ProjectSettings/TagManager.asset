@@ -8,6 +8,8 @@ TagManager:
   - ObstacleL
   - ObstacleB
   - PowerUp
+  - PointsUp
+  - DefenceUp
   layers:
   - Default
   - TransparentFX
