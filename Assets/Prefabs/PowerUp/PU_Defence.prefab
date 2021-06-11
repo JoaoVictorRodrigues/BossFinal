@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   screenEnd: -5.5
-  DefenceSFX: {fileID: 0}
+  DefenceSFX: {fileID: 8300000, guid: 3f7af5e22d43df34099241aee6c063ea, type: 3}

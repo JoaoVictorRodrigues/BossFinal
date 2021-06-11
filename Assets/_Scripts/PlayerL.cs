@@ -12,9 +12,14 @@ public class PlayerL : MonoBehaviour{
     private GameManager gm;
 
     public AudioClip transitionSFX;
+    public GameObject shield;
+    
+
+    
     
     void Start(){
         gm = GameManager.GetInstance();
+        shield.SetActive(false);
     }
 
     void Update(){
@@ -49,12 +54,12 @@ public class PlayerL : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("ObstacleL")){
+            if(shield.activeInHierarchy){
+                shield.SetActive(false);
+            } else {
+                TakeDamage();
+            }
             Destroy(collision.gameObject);
-            TakeDamage();
-        }
-        if (collision.CompareTag("ObstacleB")){
-            Destroy(collision.gameObject);
-            TakeDamage();
         }
         if (collision.CompareTag("PowerUp")){
             Destroy(collision.gameObject);
@@ -64,6 +69,7 @@ public class PlayerL : MonoBehaviour{
         }
         if (collision.CompareTag("DefenceUp")){
             Destroy(collision.gameObject);
+            shield.SetActive(true);
         }
     }
     

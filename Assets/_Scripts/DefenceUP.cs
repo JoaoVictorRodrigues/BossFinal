@@ -5,10 +5,9 @@ using UnityEngine;
 public class DefenceUP : MonoBehaviour{
     public float speed;
     public float screenEnd;
-
     private GameManager gm;
-
     public AudioClip DefenceSFX;
+    
 
     // Start is called before the first frame update
     void Start() {
@@ -27,7 +26,6 @@ public class DefenceUP : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
             AudioManager.PlaySFX(DefenceSFX);
-            gm.pontos += 1;
         }
     }
 }
