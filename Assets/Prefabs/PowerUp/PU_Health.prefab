@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   screenEnd: -5.5
-  explosionSFX: {fileID: 8300000, guid: aff888ecd00e3ed44aebfdebd5a241cf, type: 3}
+  PUSFX: {fileID: 8300000, guid: 2f3dacbbb01d6464294e324d5a07af64, type: 3}
